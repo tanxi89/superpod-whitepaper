@@ -474,34 +474,41 @@
       color: var(--md-primary-fg-color);
       border-bottom-color: var(--md-primary-fg-color);
     }
-    .sp-partner-group-wrapper.lead .partner-card {
+    .sp-partner-group-wrapper.lead .partner-item {
       background: rgba(11,47,107,.05);
       border: 1px solid var(--md-primary-fg-color);
+      border-radius: 8px;
+      padding: 8px 16px;
+      margin: 4px 0;
     }
-    /* 单位卡片网格布局 */
-    .partners-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
+    /* 单位列表样式 - 每个单位单独一行，带小黑点 */
+    .partners-list {
+      max-width: 600px;
       margin: 0 auto;
+      padding: 0;
+      list-style: none;
     }
-    .partner-card {
-      display: inline-block;
-      padding: 10px 24px;
-      background: var(--md-default-bg-color);
-      border: 1px solid var(--md-typeset-table-color);
-      border-radius: 40px;
-      font-size: .9rem;
+    .partner-item {
+      padding: 8px 0;
+      font-size: .95rem;
       font-weight: 500;
       color: var(--md-typeset-color);
-      transition: all .2s ease;
+      border-bottom: 1px solid var(--md-typeset-table-color);
+      display: flex;
+      align-items: center;
     }
-    .partner-card:hover {
-      border-color: var(--md-primary-fg-color);
-      transform: translateY(-2px);
+    .partner-item::before {
+      content: "•";
+      color: var(--md-primary-fg-color);
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-right: 12px;
     }
-    /* 响应式调整 */
+    .partner-item:last-child {
+      border-bottom: none;
+    }
+
+    /* ── Responsive ──────────────────────────────────── */
     @media (max-width: 960px) {
       .sp-signal-row,
       .sp-insight-grid,
@@ -524,7 +531,7 @@
       .sp-hero-actions a { width: 80%; text-align: center; }
       .sp-thesis, .sp-chapters { padding: 64px 0; }
       .sp-chain { padding: 20px 18px; }
-      .partner-card { padding: 6px 18px; font-size: .8rem; }
+      .partner-item { padding: 6px 0; font-size: .8rem; }
       .sp-partner-group-title { font-size: 1rem; }
     }
   </style>
@@ -624,44 +631,41 @@
   </section>
 
   <!-- ═══════════════ 参与单位（按三类区分） ═══════════════ -->
-  <section class="superpod-partners-section">
-    <div class="container">
-      <h2>参与单位</h2>
 
       <!-- 牵头单位 -->
       <div class="sp-partner-group-wrapper lead">
         <div class="sp-partner-group-title">牵头单位</div>
-        <div class="partners-grid">
+        <ul class="partners-list">
           {% for partner in config.extra.partners %}
           {% if partner.type == "lead" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <li class="partner-item">{{ partner.name }}</li>
           {% endif %}
           {% endfor %}
-        </div>
+        </ul>
       </div>
 
       <!-- 学术合编单位 -->
       <div class="sp-partner-group-wrapper">
         <div class="sp-partner-group-title">学术合编单位</div>
-        <div class="partners-grid">
+        <ul class="partners-list">
           {% for partner in config.extra.partners %}
           {% if partner.type == "institution" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <li class="partner-item">{{ partner.name }}</li>
           {% endif %}
           {% endfor %}
-        </div>
+        </ul>
       </div>
 
       <!-- 产业合编单位 -->
       <div class="sp-partner-group-wrapper">
         <div class="sp-partner-group-title">产业合编单位</div>
-        <div class="partners-grid">
+        <ul class="partners-list">
           {% for partner in config.extra.partners %}
           {% if partner.type == "company" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <li class="partner-item">{{ partner.name }}</li>
           {% endif %}
           {% endfor %}
-        </div>
+        </ul>
       </div>
 
     </div>
