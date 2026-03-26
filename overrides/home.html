@@ -625,41 +625,42 @@
 
   <!-- ═══════════════ 参与单位（按三类区分） ═══════════════ -->
   <section class="superpod-partners-section">
+    <div class="container">
 
       <!-- 牵头单位 -->
       <div class="sp-partner-group-wrapper lead">
         <div class="sp-partner-group-title">牵头单位</div>
-        <div class="partners-grid">
+        <ul class="partners-list">
           {% for partner in config.extra.partners %}
           {% if partner.type == "lead" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <li class="partner-item">{{ partner.name }}</li>
           {% endif %}
           {% endfor %}
-        </div>
+        </ul>
       </div>
 
       <!-- 学术合编单位 -->
       <div class="sp-partner-group-wrapper">
         <div class="sp-partner-group-title">学术合编单位</div>
-        <div class="partners-grid">
+        <ul class="partners-list">
           {% for partner in config.extra.partners %}
           {% if partner.type == "institution" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <li class="partner-item">{{ partner.name }}</li>
           {% endif %}
           {% endfor %}
-        </div>
+        </ul>
       </div>
 
       <!-- 产业合编单位 -->
       <div class="sp-partner-group-wrapper">
         <div class="sp-partner-group-title">产业合编单位</div>
-        <div class="partners-grid">
+        <ul class="partners-list">
           {% for partner in config.extra.partners %}
           {% if partner.type == "company" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <li class="partner-item">{{ partner.name }}</li>
           {% endif %}
           {% endfor %}
-        </div>
+        </ul>
       </div>
 
     </div>
