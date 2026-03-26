@@ -168,7 +168,7 @@ extra:
   partners:
     # 牵头单位 <!-- 修改 -->
     - name: 上海人工智能实验室
-      type: institution
+      type: lead
     # 学术合编单位（按拼音首字母排序，使用全称） <!-- 修改：按拼音排序，使用全称 -->
     - name: 北京大学
       type: institution
