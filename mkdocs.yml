@@ -166,9 +166,10 @@ nav:
 
 extra:
   partners:
-    # 牵头单位 + 高校与学术机构（拼音序）
+    # 牵头单位 <!-- 修改 -->
     - name: 上海人工智能实验室
       type: institution
+    # 学术合编单位（按拼音首字母排序，使用全称） <!-- 修改：按拼音排序，使用全称 -->
     - name: 北京大学
       type: institution
     - name: 东南大学
@@ -177,38 +178,44 @@ extra:
       type: institution
     - name: 清华大学
       type: institution
-    - name: 上海电子学会
-      type: institution
     - name: 上海交通大学
+      type: institution
+    - name: 上海市电子学会
       type: institution
     - name: 香港科技大学
       type: institution
     - name: 中国科学技术大学
       type: institution
-    # 产业伙伴（拼音序）
-    - name: 璧仞
+    # 产业合编单位（按拼音首字母排序，使用简称） <!-- 修改：按拼音排序，使用简称 -->
+    - name: 壁仞
       type: company
-    - name: 达摩院
+    - name: 海光
       type: company
     - name: 华为
       type: company
     - name: 阶跃星辰
       type: company
-    - name: 沐曦
+    - name: 阡视
       type: company
-    - name: 平头哥
+    - name: 湖畔实验室
+      type: institution
+    - name: 联通数科
+      type: company
+    - name: 沐曦
       type: company
     - name: 奇异摩尔
       type: company
+    - name: 晟联科
+      type: company
     - name: 盛科
+      type: company
+    - name: 算丰信息
       type: company
     - name: 天数
       type: company
     - name: 曦望
       type: company
     - name: 曦智
-      type: company
-    - name: 中国联通
       type: company
     - name: 中兴
       type: company
