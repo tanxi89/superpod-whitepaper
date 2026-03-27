@@ -165,6 +165,9 @@ nav:
     - 产业生态地图: 08-ecosystem-map.md
 
 extra:
+  analytics:
+    provider: google
+    property: G-34NPVP9VK6
   partners:
     # 牵头单位 <!-- 修改 -->
     - name: 上海人工智能实验室
