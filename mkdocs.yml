@@ -1,4 +1,4 @@
-site_name: 超节点技术白皮书
+site_name: 超节点技术体系白皮书
 site_description: 面向下一代模型的 AI 超节点技术白皮书
 site_url: https://deeplink.org/superpod-whitepaper/
 docs_dir: src
@@ -145,12 +145,12 @@ nav:
       - 光电互连封装（LPO/NPO/CPO）: 05-future/packaging.md
       - Chiplet 多Die 集成（2.5D/3D）: 05-future/chiplet.md
       - 堆叠内存技术（HBM/3D DRAM）: 05-future/hbm.md
-    - 先进模型技术演进:
-      - 模型技术演进总览: 05-future/model-tech.md
-      - 低精度数值格式: 05-future/low-precision.md
-      - 超长序列技术: 05-future/long-context.md
-      - 超稀疏模型技术: 05-future/ultra-sparse.md
-      - 多模态融合技术: 05-future/multimodal.md
+    # - 先进模型技术演进:
+    #   - 模型技术演进总览: 05-future/model-tech.md
+    #   - 低精度数值格式: 05-future/low-precision.md
+    #   - 超长序列技术: 05-future/long-context.md
+    #   - 超稀疏模型技术: 05-future/ultra-sparse.md
+    #   - 多模态融合技术: 05-future/multimodal.md
   - 结语与附录:
     - 总结: 06-conclusion.md
     - 证据等级与判断口径: 07-evidence-grading.md
@@ -169,59 +169,84 @@ extra:
     provider: google
     property: G-34NPVP9VK6
   partners:
-    # 牵头单位 <!-- 修改 -->
+    # 牵头单位
     - name: 上海人工智能实验室
       type: lead
-    # 学术合编单位（按拼音首字母排序，使用全称） <!-- 修改：按拼音排序，使用全称 -->
+      logo: assets/logos/shailab.svg
+    # 学术合编单位（按拼音首字母排序，使用全称）
     - name: 北京大学
       type: institution
+      logo: assets/logos/pku.png
     - name: 东南大学
       type: institution
+      logo: assets/logos/seu.png
     - name: 南京大学
       type: institution
+      logo: assets/logos/nju.png
     - name: 清华大学
       type: institution
+      logo: assets/logos/tsinghua.png
     - name: 上海交通大学
       type: institution
+      logo: assets/logos/sjtu.png
     - name: 上海市电子学会
       type: institution
+      logo: assets/logos/sh-electronics.png
     - name: 香港科技大学
       type: institution
+      logo: assets/logos/hkust.svg
     - name: 中国科学技术大学
       type: institution
-    # 产业合编单位（按拼音首字母排序，使用简称） <!-- 修改：按拼音排序，使用简称 -->
-    - name: 壁仞
+      logo: assets/logos/ustc.png
+    # 产业合编单位（按拼音首字母排序，使用简称）
+    - name: 壁仞科技
       type: company
-    - name: 海光
+      logo: assets/logos/biren.png
+    - name: 海光信息
       type: company
+      logo: assets/logos/hygon.png
     - name: 华为
       type: company
+      logo: assets/logos/huawei.png
     - name: 阶跃星辰
       type: company
-    - name: 阡视
+      logo: assets/logos/stepfun.png
+    - name: 阡视科技
       type: company
+      logo: assets/logos/qianshi.png
     - name: 湖畔实验室
       type: company
+      logo: assets/logos/hupan.svg
     - name: 联通数科
       type: company
+      logo: assets/logos/unicom-digital.svg
     - name: 沐曦
       type: company
+      logo: assets/logos/metax.png
     - name: 奇异摩尔
       type: company
+      logo: assets/logos/kiwimoore.png
     - name: 晟联科
       type: company
-    - name: 盛科
+      logo: assets/logos/shenglianke.png
+    - name: 盛科通信
       type: company
+      logo: assets/logos/centec.png
     - name: 算丰信息
       type: company
-    - name: 天数
+      logo: assets/logos/suanova.png
+    - name: 天数智芯
       type: company
-    - name: 曦望
+      logo: assets/logos/iluvatar.png
+    - name: 曦望智能
       type: company
-    - name: 曦智
+      logo: assets/logos/xiwang.png
+    - name: 曦智科技
       type: company
-    - name: 中兴
+      logo: assets/logos/lightelligence.png
+    - name: 中兴通讯
       type: company
+      logo: assets/logos/zte.png
   generator: false
   social:
     - icon: fontawesome/brands/github
