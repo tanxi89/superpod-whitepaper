@@ -67,6 +67,22 @@ plugins:
       fallback_to_build_date: true
       locale: zh
       enable_creation_date: true
+  - optimize:
+      enabled: !ENV [CI, false]
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      css_files:
+        - assets/stylesheets/custom.css
+        - assets/stylesheets/home.css
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      zoomable: true
+      draggable: true
   - excalidraw
   - heti
 

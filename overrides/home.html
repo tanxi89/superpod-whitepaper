@@ -13,7 +13,7 @@
 
     /* ── Hero: 白皮书封面风格 ────────────────────────────── */
     .sp-hero {
-      min-height: 92vh;
+      min-height: 61.8vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -590,21 +590,8 @@
       <hr class="sp-hero-rule" />
 
       <p class="sp-hero-thesis">
-        过去几年，大模型技术的演进重心已由单一预训练竞争，逐步扩展到后训练、推理时扩展以及面向 Agent 的高频调用等多个阶段。与之相伴的，不只是算力总量继续上升，更是基础设施所承受的压力开始由单点性能追求转向多维协同约束。单芯片制程与局部器件升级仍在持续推进，却已越来越难独自支撑系统能力的持续跃迁。由此，下一代算力建设真正需要回答的，已不再只是“更强的芯片”或“更多的节点”，而是如何把计算、内存、互联、软件与整机重新组织为一个可持续演进的系统对象；超节点由此成为新阶段人工智能基础设施的重要组织形态，其意义不在于规模放大本身，而在于为系统能力边界的重组与外推提供工程承载。
+        超节点是一种极致的系统工程路径，通过不断引入新的技术变量来实现超越摩尔定律的算力增长，进而满足指数增长的算力需求。
       </p>
-
-      <figure class="sp-hero-figure">
-        <img src="assets/images/compute_vs_intelligence.png" alt="从预训练到 Agent 应用，算力需求沿多波 scaling 持续抬升，推动智能水平与计算投入同步上移" />
-        <figcaption>从预训练到后训练、推理时扩展，再到 Agent 与 AI4S，驱动智能能力继续上移的因素正在由单一训练规模扩展为多阶段叠加。由此带来的关键变化，不只是算力需求持续增长，更是基础设施的主导约束开始由单点器件能力转向系统级协同组织能力。</figcaption>
-      </figure>
-
-      <div class="sp-hero-actions">
-        <a href="00-executive-summary/" class="sp-btn-primary">执行摘要</a>
-        <a href="00-preface/" class="sp-btn-ghost">前言</a>
-        <a href="01-architecture/" class="sp-btn-ghost">架构分析</a>
-        <a href="00-preface/#组织机制" class="sp-btn-ghost">组织机制</a>
-        <a href="04-reference-designs/" class="sp-btn-ghost">参考设计</a>
-      </div>
 
     </div>
   </section>
@@ -613,60 +600,60 @@
   <section class="sp-chapters">
     <div class="container">
       <h2>全书结构</h2>
-      <p class="sp-chapters-sub">沿着“需求变化如何把问题推向系统层、超节点如何成为关键系统对象、系统工程又如何把能力边界打开并兑现”的主线展开</p>
+      <p class="sp-chapters-sub">从需求压力出发，理解超节点为何出现、系统能力如何兑现，再到工程路径选择与未来演进</p>
 
       <!-- ── 证明层 ── -->
-      <div class="sp-layer-label">先回答需求为何变化，再回答超节点为何成为关键系统对象</div>
+      <div class="sp-layer-label">为什么需要超节点，以及怎么把系统能力兑现出来</div>
       <div class="sp-ch-grid">
         <a href="01-architecture/" class="sp-ch-card">
           <div class="sp-ch-num">第一章</div>
-          <h3>架构分析 · 定义边界</h3>
-          <p>从需求侧的多阶段叠加与供给侧的系统增速张力出发，解释为何问题已由单点器件升级转向系统能力组织，并据此定义超节点这一关键系统对象，建立系统能力边界与帕累托前沿的分析框架。</p>
+          <h3>架构分析</h3>
+          <p>算力需求四波叠加，单芯片已接不住系统增速。从需求与供给的张力出发，定义超节点并建立分析框架。</p>
         </a>
         <a href="02-software/" class="sp-ch-card">
           <div class="sp-ch-num">第二章</div>
-          <h3>软件系统 · 兑现边界</h3>
-          <p>当超节点被定义为一个可被放大的系统对象之后，软件真正要回答的，便不再是局部能力如何叠加，而是内存语义、通信运行时、RAS 与训推工程如何共同把被打开的硬件上界稳定兑现为 Goodput。</p>
+          <h3>软件系统</h3>
+          <p>硬件打开能力上界，软件决定能兑现多少。讨论内存语义、通信运行时与 RAS 如何把硬件能力转化为有效算力。</p>
         </a>
         <a href="03-simulation/" class="sp-ch-card">
           <div class="sp-ch-num">第三章</div>
-          <h3>建模仿真 · 度量边界</h3>
-          <p>系统工程一旦成为主战场，判断就不能停留在规格表比较。建模仿真要同时回答理论上界在哪里、软件实际兑现了多少，以及哪些新变量正在推动系统能力边界继续外移。</p>
+          <h3>建模仿真</h3>
+          <p>判断不能停在规格表比较。建模仿真同时回答：理论上界在哪、实际兑现了多少、哪些新变量正在推动系统继续进步。</p>
         </a>
       </div>
 
       <!-- ── 决策层 ── -->
-      <div class="sp-layer-label">再回答当前如何在边界上取点，以及未来哪些变量将继续改写边界</div>
+      <div class="sp-layer-label">当前怎么选工程路径，未来哪些技术将改变格局</div>
       <div class="sp-ch-grid">
         <a href="04-reference-designs/" class="sp-ch-card">
           <div class="sp-ch-num">第四章</div>
-          <h3>参考设计 · 选择边界上的点</h3>
-          <p>当问题回到系统能力边界之后，工程上就不再存在脱离约束条件的统一最优解。五个参考设计对应的，正是当前边界上五种各自不可支配的系统回答。</p>
+          <h3>参考设计</h3>
+          <p>五个参考设计分别面向不同约束和负载，代表当前五种各有优劣、互不替代的工程路径。</p>
         </a>
         <a href="05-future/" class="sp-ch-card">
           <div class="sp-ch-num">第五章</div>
-          <h3>未来演进 · 预判边界变化</h3>
-          <p>如果超节点本质上是一条持续引入新变量的代际演进路径，那么光互联、先进封装、Chiplet、HBM/3D DRAM 与模型形态演进，讨论的就不只是技术趋势，而是下一代边界将如何被继续改写。</p>
+          <h3>未来演进</h3>
+          <p>光互联、先进封装、Chiplet、HBM/3D DRAM 与模型形态演进，正在改写下一代系统的技术格局。</p>
         </a>
         <a href="06-conclusion/" class="sp-ch-card">
           <div class="sp-ch-num">第六章</div>
-          <h3>总结 · 汇总判断</h3>
-          <p>全书最终回到同一个判断：真正决定下一代竞争格局的，不是某一个局部参数，而是持续推动系统能力边界外移的能力。</p>
+          <h3>总结</h3>
+          <p>真正决定竞争格局的，不是某个局部参数，而是持续提升系统整体能力的速度。</p>
         </a>
       </div>
 
       <!-- ── 机制层 ── -->
-      <div class="sp-layer-label">最后把分析框架延伸为可持续比较与协作的接口</div>
+      <div class="sp-layer-label">从分析框架到产业协作</div>
       <div class="sp-ch-grid sp-ch-grid-2">
         <a href="07-spi/" class="sp-ch-card">
           <div class="sp-ch-num">SPI</div>
           <h3>SuperPod Pareto Index</h3>
-          <p>白皮书首先回答“怎么看”，SPI 则进一步讨论未来如何围绕产品条目、证据口径、保密边界与治理问题，把这种比较框架沉淀为可持续展开的说明接口。</p>
+          <p>白皮书回答“怎么看”，SPI 则讨论如何把比较框架落地：产品条目怎么定、数据怎么对齐、边界怎么划，为后续持续评估奠定基础。</p>
         </a>
         <a href="08-ecosystem-map/" class="sp-ch-card">
           <div class="sp-ch-num">产业生态</div>
           <h3>产业生态地图</h3>
-          <p>超节点并不是单点产品竞争，而是跨芯片、互联、封装、软件与运营的协同工程。产业生态地图据此识别关键环节、短板位置与优先投入方向。</p>
+          <p>超节点是跨芯片、互联、封装、软件与运营的协同工程。产业生态地图识别关键环节、短板与优先投入方向。</p>
         </a>
       </div>
 
