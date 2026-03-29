@@ -3,7 +3,7 @@ site_description: >-
   面向下一代大模型的超节点(SuperPod)技术白皮书，系统分析高带宽域(HBD)架构、
   互联拓扑、软件栈、建模仿真与参考设计，覆盖 NVIDIA NVL72、华为 CloudMatrix 等
   主流方案，为 AI 算力基础设施建设者提供多维分析框架与帕累托前沿评估方法。
-site_url: https://deeplink.org/superpod-whitepaper/
+site_url: https://deepLink-org.github.io/superpod-whitepaper/
 site_author: 上海人工智能实验室 · DeepLink
 docs_dir: src
 
