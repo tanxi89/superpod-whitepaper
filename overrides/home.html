@@ -99,7 +99,31 @@
       line-height: 1.9;
       color: rgba(255,255,255,.78);
       max-width: 700px;
-      margin: 0 auto 28px;
+      margin: 0 auto 22px;
+    }
+
+    .sp-hero-figure {
+      max-width: 860px;
+      margin: 0 auto 30px;
+      padding: 18px 18px 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 16px 48px rgba(0,0,0,.18);
+    }
+    .sp-hero-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      background: rgba(255,255,255,.03);
+    }
+    .sp-hero-figure figcaption {
+      margin-top: 12px;
+      font-size: .82rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,.68);
     }
 
     .sp-signal-row {
@@ -427,7 +451,7 @@
       text-decoration: underline;
     }
 
-    /* ── 参与单位样式（重新设计）───────────────────────────── */
+    /* ── 参与单位样式（Logo 展示）───────────────────────────── */
     .superpod-partners-section {
       padding: 96px 0;
       background: var(--md-default-bg-color);
@@ -447,59 +471,75 @@
       margin: 0 0 48px;
       letter-spacing: .04em;
     }
-    /* 分组标题样式 */
     .sp-partner-group-title {
       font-family: var(--sp-font-heading);
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       font-weight: 600;
+      letter-spacing: .12em;
       color: var(--md-typeset-color);
+      opacity: .55;
       text-align: center;
-      margin: 0 0 24px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--md-primary-fg-color);
-      display: inline-block;
-      width: auto;
-      letter-spacing: .02em;
+      text-transform: uppercase;
+      margin: 0 0 28px;
+      position: relative;
     }
+    .sp-partner-group-title::before,
+    .sp-partner-group-title::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 60px;
+      border-top: 1px solid var(--md-typeset-table-color);
+    }
+    .sp-partner-group-title::before { right: calc(50% + 100px); }
+    .sp-partner-group-title::after  { left:  calc(50% + 100px); }
     .sp-partner-group-wrapper {
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     }
-    /* 牵头单位特殊样式 */
     .sp-partner-group-wrapper.lead {
       margin-bottom: 56px;
     }
-    .sp-partner-group-wrapper.lead .sp-partner-group-title {
-      font-size: 1.3rem;
-      color: var(--md-primary-fg-color);
-      border-bottom-color: var(--md-primary-fg-color);
+    .sp-partner-group-wrapper.lead .partner-logo-card {
+      border: 1px solid rgba(11,47,107,.18);
+      background: rgba(11,47,107,.03);
     }
-    .sp-partner-group-wrapper.lead .partner-card {
-      background: rgba(11,47,107,.05);
-      border: 1px solid var(--md-primary-fg-color);
-    }
-    /* 单位卡片网格布局 */
     .partners-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
+      align-items: center;
+      gap: 20px;
       margin: 0 auto;
     }
-    .partner-card {
-      display: inline-block;
-      padding: 10px 24px;
+    .partner-logo-card {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
       background: var(--md-default-bg-color);
       border: 1px solid var(--md-typeset-table-color);
-      border-radius: 40px;
-      font-size: .9rem;
-      font-weight: 500;
-      color: var(--md-typeset-color);
-      transition: all .2s ease;
+      border-radius: 10px;
+      transition: all .25s ease;
+      min-width: 120px;
     }
-    .partner-card:hover {
+    .partner-logo-card:hover {
       border-color: var(--md-primary-fg-color);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    }
+    .partner-logo-card img {
+      display: block;
+      height: 32px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+    }
+    .sp-partner-group-wrapper.lead .partner-logo-card img {
+      height: 38px;
+    }
+    [data-md-color-scheme="slate"] .partner-logo-card img {
+      filter: invert(1) hue-rotate(180deg);
     }
     /* 响应式调整 */
     @media (max-width: 960px) {
@@ -524,8 +564,13 @@
       .sp-hero-actions a { width: 80%; text-align: center; }
       .sp-thesis, .sp-chapters { padding: 64px 0; }
       .sp-chain { padding: 20px 18px; }
-      .partner-card { padding: 6px 18px; font-size: .8rem; }
-      .sp-partner-group-title { font-size: 1rem; }
+      .partner-logo-card { padding: 10px 16px; min-width: 100px; }
+      .partner-logo-card img { height: 26px; max-width: 140px; }
+      .sp-partner-group-title { font-size: .85rem; }
+      .sp-partner-group-title::before,
+      .sp-partner-group-title::after { width: 30px; }
+      .sp-partner-group-title::before { right: calc(50% + 70px); }
+      .sp-partner-group-title::after  { left:  calc(50% + 70px); }
     }
   </style>
 
@@ -545,8 +590,13 @@
       <hr class="sp-hero-rule" />
 
       <p class="sp-hero-thesis">
-        当模型规模、AI for Science 与系统约束同时变化时，下一代算力建设已不能再被理解为单点器件升级问题。超节点之所以重要，不在于把更多资源收拢到一个机柜，而在于它把芯片、互联、封装、软件与整机重新组织到同一工程边界中，使真正决定竞争力的对象从局部参数转向系统能力，以及这种能力能否被持续兑现为 Goodput。
+        过去几年，大模型技术的演进重心已由单一预训练竞争，逐步扩展到后训练、推理时扩展以及面向 Agent 的高频调用等多个阶段。与之相伴的，不只是算力总量继续上升，更是基础设施所承受的压力开始由单点性能追求转向多维协同约束。单芯片制程与局部器件升级仍在持续推进，却已越来越难独自支撑系统能力的持续跃迁。由此，下一代算力建设真正需要回答的，已不再只是“更强的芯片”或“更多的节点”，而是如何把计算、内存、互联、软件与整机重新组织为一个可持续演进的系统对象；超节点由此成为新阶段人工智能基础设施的重要组织形态，其意义不在于规模放大本身，而在于为系统能力边界的重组与外推提供工程承载。
       </p>
+
+      <figure class="sp-hero-figure">
+        <img src="assets/images/compute_vs_intelligence.png" alt="从预训练到 Agent 应用，算力需求沿多波 scaling 持续抬升，推动智能水平与计算投入同步上移" />
+        <figcaption>从预训练到后训练、推理时扩展，再到 Agent 与 AI4S，驱动智能能力继续上移的因素正在由单一训练规模扩展为多阶段叠加。由此带来的关键变化，不只是算力需求持续增长，更是基础设施的主导约束开始由单点器件能力转向系统级协同组织能力。</figcaption>
+      </figure>
 
       <div class="sp-hero-actions">
         <a href="00-executive-summary/" class="sp-btn-primary">执行摘要</a>
@@ -563,68 +613,69 @@
   <section class="sp-chapters">
     <div class="container">
       <h2>全书结构</h2>
-      <p class="sp-chapters-sub">从定义前沿、组织系统路径到预留协作接口，覆盖超节点竞争的完整链路</p>
+      <p class="sp-chapters-sub">沿着“需求变化如何把问题推向系统层、超节点如何成为关键系统对象、系统工程又如何把能力边界打开并兑现”的主线展开</p>
 
       <!-- ── 证明层 ── -->
-      <div class="sp-layer-label">超节点为何成立，核心约束是什么</div>
+      <div class="sp-layer-label">先回答需求为何变化，再回答超节点为何成为关键系统对象</div>
       <div class="sp-ch-grid">
         <a href="01-architecture/" class="sp-ch-card">
           <div class="sp-ch-num">第一章</div>
-          <h3>架构分析 · 定义前沿</h3>
-          <p>从需求侧的双重指数增长出发，解释系统级"2 年 5–6 倍"增速的机制，建立帕累托前沿外推的分析框架，逐层拆解产品实践、电气接口、互联协议、网络拓扑与整机工程。</p>
+          <h3>架构分析 · 定义边界</h3>
+          <p>从需求侧的多阶段叠加与供给侧的系统增速张力出发，解释为何问题已由单点器件升级转向系统能力组织，并据此定义超节点这一关键系统对象，建立系统能力边界与帕累托前沿的分析框架。</p>
         </a>
         <a href="02-software/" class="sp-ch-card">
           <div class="sp-ch-num">第二章</div>
-          <h3>软件系统 · 兑现前沿</h3>
-          <p>软件不是单点能力的拼接，而是把内存语义、通信运行时、RAS 与训推工程组织成一条可持续演进的系统路径。生态具有强惯性，而内存语义正是这条路径得以延续、并将新硬件变量稳定兑现为 Goodput 的基础。</p>
+          <h3>软件系统 · 兑现边界</h3>
+          <p>当超节点被定义为一个可被放大的系统对象之后，软件真正要回答的，便不再是局部能力如何叠加，而是内存语义、通信运行时、RAS 与训推工程如何共同把被打开的硬件上界稳定兑现为 Goodput。</p>
         </a>
         <a href="03-simulation/" class="sp-ch-card">
           <div class="sp-ch-num">第三章</div>
-          <h3>建模仿真 · 度量前沿</h3>
-          <p>当设计空间多维且耦合，仿真是量化帕累托位置、区分"沿前沿移动"与"真正推移前沿"的决策工具。</p>
+          <h3>建模仿真 · 度量边界</h3>
+          <p>系统工程一旦成为主战场，判断就不能停留在规格表比较。建模仿真要同时回答理论上界在哪里、软件实际兑现了多少，以及哪些新变量正在推动系统能力边界继续外移。</p>
         </a>
       </div>
 
       <!-- ── 决策层 ── -->
-      <div class="sp-layer-label">当前如何选择工程路径，未来哪些变量将改写前沿</div>
+      <div class="sp-layer-label">再回答当前如何在边界上取点，以及未来哪些变量将继续改写边界</div>
       <div class="sp-ch-grid">
         <a href="04-reference-designs/" class="sp-ch-card">
           <div class="sp-ch-num">第四章</div>
-          <h3>参考设计 · 选择前沿上的点</h3>
-          <p>五个参考设计对应帕累托前沿上五个不可支配的位置——从以太网生态兼容到总线级内存语义，从 Dragonfly 组间弹性到 Torus 全拓扑重构。</p>
+          <h3>参考设计 · 选择边界上的点</h3>
+          <p>当问题回到系统能力边界之后，工程上就不再存在脱离约束条件的统一最优解。五个参考设计对应的，正是当前边界上五种各自不可支配的系统回答。</p>
         </a>
         <a href="05-future/" class="sp-ch-card">
           <div class="sp-ch-num">第五章</div>
-          <h3>未来演进 · 预判前沿变化</h3>
-          <p>光互联、先进封装、Chiplet、HBM/3D DRAM 与模型形态演进将改写帕累托前沿的维度与形状。</p>
+          <h3>未来演进 · 预判边界变化</h3>
+          <p>如果超节点本质上是一条持续引入新变量的代际演进路径，那么光互联、先进封装、Chiplet、HBM/3D DRAM 与模型形态演进，讨论的就不只是技术趋势，而是下一代边界将如何被继续改写。</p>
         </a>
         <a href="06-conclusion/" class="sp-ch-card">
           <div class="sp-ch-num">第六章</div>
           <h3>总结 · 汇总判断</h3>
-          <p>持续进行系统级帕累托前沿外推的能力，就是超节点竞争的本质。</p>
+          <p>全书最终回到同一个判断：真正决定下一代竞争格局的，不是某一个局部参数，而是持续推动系统能力边界外移的能力。</p>
         </a>
       </div>
 
       <!-- ── 机制层 ── -->
-      <div class="sp-layer-label">从分析框架到产业协作接口的筹备与展开</div>
+      <div class="sp-layer-label">最后把分析框架延伸为可持续比较与协作的接口</div>
       <div class="sp-ch-grid sp-ch-grid-2">
         <a href="07-spi/" class="sp-ch-card">
           <div class="sp-ch-num">SPI</div>
           <h3>SuperPod Pareto Index</h3>
-          <p>SPI 当前不是正式评估机制，而是围绕产品条目、证据口径、保密边界与治理问题展开的筹备说明。白皮书定义"怎么看"，SPI 进一步讨论"现在在哪"未来可以如何被持续标注。</p>
+          <p>白皮书首先回答“怎么看”，SPI 则进一步讨论未来如何围绕产品条目、证据口径、保密边界与治理问题，把这种比较框架沉淀为可持续展开的说明接口。</p>
         </a>
         <a href="08-ecosystem-map/" class="sp-ch-card">
           <div class="sp-ch-num">产业生态</div>
           <h3>产业生态地图</h3>
-          <p>超节点不是单点产品竞争，而是跨芯片、互联、封装、软件与运营的协同工程。生态地图识别关键环节、短板位置与优先投入方向。</p>
+          <p>超节点并不是单点产品竞争，而是跨芯片、互联、封装、软件与运营的协同工程。产业生态地图据此识别关键环节、短板位置与优先投入方向。</p>
         </a>
       </div>
 
     </div>
   </section>
 
-  <!-- ═══════════════ 参与单位（按三类区分） ═══════════════ -->
+  <!-- ═══════════════ 参与单位（Logo 展示） ═══════════════ -->
   <section class="superpod-partners-section">
+    <div class="container">
 
       <!-- 牵头单位 -->
       <div class="sp-partner-group-wrapper lead">
@@ -632,7 +683,9 @@
         <div class="partners-grid">
           {% for partner in config.extra.partners %}
           {% if partner.type == "lead" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <div class="partner-logo-card" title="{{ partner.name }}">
+            <img src="{{ partner.logo }}" alt="{{ partner.name }}" loading="lazy" />
+          </div>
           {% endif %}
           {% endfor %}
         </div>
@@ -644,7 +697,9 @@
         <div class="partners-grid">
           {% for partner in config.extra.partners %}
           {% if partner.type == "institution" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <div class="partner-logo-card" title="{{ partner.name }}">
+            <img src="{{ partner.logo }}" alt="{{ partner.name }}" loading="lazy" />
+          </div>
           {% endif %}
           {% endfor %}
         </div>
@@ -656,7 +711,9 @@
         <div class="partners-grid">
           {% for partner in config.extra.partners %}
           {% if partner.type == "company" %}
-          <div class="partner-card">{{ partner.name }}</div>
+          <div class="partner-logo-card" title="{{ partner.name }}">
+            <img src="{{ partner.logo }}" alt="{{ partner.name }}" loading="lazy" />
+          </div>
           {% endif %}
           {% endfor %}
         </div>
