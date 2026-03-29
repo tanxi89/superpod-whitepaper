@@ -5,5 +5,71 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-{% endblock %}
 
+  {% if page and page.meta %}
+  {% set page_desc = page.meta.description | default(config.site_description, true) %}
+  {% set page_title = page.title ~ " - " ~ config.site_name if page.title else config.site_name %}
+  {% set page_url = page.canonical_url | default(config.site_url, true) %}
+  {% else %}
+  {% set page_desc = config.site_description %}
+  {% set page_title = config.site_name %}
+  {% set page_url = config.site_url %}
+  {% endif %}
+  {% set page_image = config.site_url ~ "assets/images/og-cover.png" %}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ page_title }}" />
+  <meta property="og:description" content="{{ page_desc }}" />
+  <meta property="og:url" content="{{ page_url }}" />
+  <meta property="og:site_name" content="{{ config.site_name }}" />
+  <meta property="og:image" content="{{ page_image }}" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page_title }}" />
+  <meta name="twitter:description" content="{{ page_desc }}" />
+  <meta name="twitter:image" content="{{ page_image }}" />
+
+  <!-- SEO meta -->
+  <meta name="description" content="{{ page_desc }}" />
+  <meta name="author" content="{{ config.site_author }}" />
+  {% if page and page.meta and page.meta.keywords %}
+  <meta name="keywords" content="{{ page.meta.keywords }}" />
+  {% else %}
+  <meta name="keywords" content="超节点,SuperPod,AI基础设施,大模型,高带宽域,HBD,帕累托前沿,互联,NVLink,算力,Goodput,白皮书" />
+  {% endif %}
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "{{ page_title }}",
+    "description": "{{ page_desc }}",
+    "url": "{{ page_url }}",
+    "image": "{{ page_image }}",
+    "author": {
+      "@type": "Organization",
+      "name": "{{ config.site_author }}",
+      "url": "https://github.com/DeepLink-org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "上海人工智能实验室 · DeepLink",
+      "url": "https://github.com/DeepLink-org"
+    },
+    "inLanguage": "zh-CN",
+    "datePublished": "2025-03-01",
+    "dateModified": "2026-03-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page_url }}"
+    }
+  }
+  </script>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page_url }}" />
+{% endblock %}

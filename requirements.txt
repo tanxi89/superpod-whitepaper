@@ -12,5 +12,7 @@ jieba>=0.42.1
 mkdocs-encryptcontent-plugin>=3.1.0
 
 mkdocs-heti-plugin
-mkdocs-excalidraw
 PyYAML>=6.0
+
+# SEO & 站点增强
+mkdocs-git-revision-date-localized-plugin

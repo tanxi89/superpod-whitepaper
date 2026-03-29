@@ -1,6 +1,8 @@
 ---
 template: home.html
 title: SuperPod 技术白皮书
+description: 面向下一代大模型的超节点(SuperPod)技术白皮书，系统分析高带宽域架构、互联拓扑、软件栈与参考设计，为AI算力基础设施建设者提供帕累托前沿评估框架。
+keywords: 超节点,SuperPod,AI基础设施,大模型,高带宽域,HBD,帕累托前沿,NVLink,Goodput,白皮书
 hide:
   - toc
   - navigation
