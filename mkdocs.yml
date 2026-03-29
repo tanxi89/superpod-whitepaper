@@ -1,6 +1,10 @@
 site_name: 超节点技术体系白皮书
-site_description: 面向下一代模型的 AI 超节点技术白皮书
-site_url: https://deeplink.org/superpod-whitepaper/
+site_description: >-
+  面向下一代大模型的超节点(SuperPod)技术白皮书，系统分析高带宽域(HBD)架构、
+  互联拓扑、软件栈、建模仿真与参考设计，覆盖 NVIDIA NVL72、华为 CloudMatrix 等
+  主流方案，为 AI 算力基础设施建设者提供多维分析框架与帕累托前沿评估方法。
+site_url: https://deepLink-org.github.io/superpod-whitepaper/
+site_author: 上海人工智能实验室 · DeepLink
 docs_dir: src
 
 repo_name: superpod-whitepaper
@@ -34,12 +38,15 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.expand
+    - navigation.footer
     - toc.integrate
     - search.highlight
     - search.share
+    - search.suggest
     - content.action.edit
     - content.code.copy
     - content.code.annotate
+    - content.tooltips
     - toc.follow
   icon:
     repo: fontawesome/brands/github
@@ -49,12 +56,17 @@ plugins:
       lang:
         - zh
         - en
-      separator: '[\s\-\.]+'
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   # - encryptcontent:
   #     global_password: 'superpod2026'
   #     reload_scripts:
   #       - javascripts/charts.js
   #     title_prefix: '🔒'
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      locale: zh
+      enable_creation_date: true
   - excalidraw
   - heti
 
