@@ -225,11 +225,11 @@ extra:
       logo: assets/logos/hkust.svg
     - name: 中国科学技术大学
       type: institution
-      logo: assets/logos/ustc.png
+      logo: assets/logos/ustc.jpg
     # 产业合编单位（按拼音首字母排序，使用简称）
     - name: 壁仞科技
       type: company
-      logo: assets/logos/biren.ai
+      logo: assets/logos/biren.jpg
     - name: 海光信息
       type: company
       logo: assets/logos/hygon.png
@@ -244,7 +244,7 @@ extra:
       logo: assets/logos/qianshi.png
     - name: 湖畔实验室
       type: company
-      logo: assets/logos/hupan.svg
+      logo: assets/logos/hupan.jpg
     - name: 联通数科
       type: company
       logo: assets/logos/unicom-digital.svg
