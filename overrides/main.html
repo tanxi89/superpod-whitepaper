@@ -32,9 +32,7 @@
   <meta name="twitter:description" content="{{ page_desc }}" />
   <meta name="twitter:image" content="{{ page_image }}" />
 
-  <!-- SEO meta -->
-  <meta name="description" content="{{ page_desc }}" />
-  <meta name="author" content="{{ config.site_author }}" />
+  <!-- SEO meta (description already output by Material base.html) -->
   {% if page and page.meta and page.meta.keywords %}
   <meta name="keywords" content="{{ page.meta.keywords }}" />
   {% else %}
