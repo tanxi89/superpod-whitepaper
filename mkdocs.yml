@@ -200,7 +200,7 @@ extra:
     # 牵头单位
     - name: 上海人工智能实验室
       type: lead
-      logo: assets/logos/shailab.svg
+      logo: assets/logos/shailab.jpg
     # 学术合编单位（按拼音首字母排序，使用全称）
     - name: 北京大学
       type: institution
