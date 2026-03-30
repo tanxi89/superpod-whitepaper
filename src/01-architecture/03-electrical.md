@@ -1,3 +1,8 @@
+---
+description: "阐述Scale-Up域物理层基础：Lane与SerDes架构、OIF-CEI速率代际演进、PCS至PMD子层分工，及224G高速交换芯片生态。"
+keywords: "物理层,SerDes,OIF-CEI,PCS,PMA,PMD,PAM4,FEC,224G,数据中心交换芯片"
+---
+
 # 物理层与电气接口
 
 本章介绍 `Scale-Up` 域的物理层基础。为了降低阅读门槛，前半部分先建立 `Lane`、`SerDes`、`OIF-CEI` 等基本概念，再进入 `PCS`、`PMA`、`PMD` 的物理层分层结构，以及信号速率、接口类型、系统损耗、误码率、一致性和驱动能力等关键要求；后半部分再补充这些物理层能力与 `CEI`、交换芯片和 `Scale-Up` 演进之间的关系。

@@ -1,3 +1,8 @@
+---
+description: "介绍标准总线Scale-Up构型：内存语义与专用交换域、UALink的FAM与Flit机制及Pod边界约束，并以海光DCU的HSL与CLOS实践为例。"
+keywords: "标准构型,Scale-Up,UALink,Load/Store/Atomic,FAM,Flit,NVSwitch,HSL,CLOS,内存语义"
+---
+
 # 标准构型（全对等互联+总线型协议）
 
 总线型 Scale-Up 方案的共同目标，是在机柜级高带宽域内提供接近片内互联的内存语义能力：加速器之间可以直接执行 `Load/Store/Atomic`，而不必把所有通信都退化为消息传递。但如果把它仅仅理解为一种低时延协议，就会低估这条路线真正锚定的约束。更准确地说，标准总线构型优先保留的是：**把更多强语义访问稳定留在受控域内，让远端资源在软件上尽可能继续表现为本地资源。**

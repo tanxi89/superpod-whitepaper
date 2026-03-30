@@ -1,3 +1,8 @@
+---
+description: "以NVIDIA NVLink/NVSwitch Fabric为实例，展开GMMU与Aperture寻址、Fabric Base Address跨节点编址、PTE映射及Fabric Manager/IMEX协调层的端到端访存路径。"
+keywords: "GMMU,Aperture,Fabric Base Address,NVSwitch,PTE,Fabric Probe,Clique ID,Fabric Manager,IMEX,端到端访存"
+---
+
 # 软件访存机制
 
 语义一旦被定义下来，下一步的问题就不再是“该承诺什么”，而是“这些承诺究竟靠什么成立”。上一节把远端内存要成为稳定资源所需的几类基本义务已经摆清：操作语义要完整、保序不能失真、地址必须可翻译、协议必须能把这些承诺稳定送到远端。真正进入真实系统之后，这些抽象要求不会停留在一张语义清单上，而会被迫形成一组彼此耦合的工程对象。本节以 `NVIDIA` 的 `NVLink/NVSwitch Fabric` 为例，不是为了把某一家厂商写成标准答案，而是为了把抽象语义压到一套可运行的实现链路上，看清三个更具体的问题：

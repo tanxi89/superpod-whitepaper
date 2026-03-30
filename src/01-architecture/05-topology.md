@@ -1,3 +1,8 @@
+---
+description: "给出直径与二分带宽等拓扑核心指标，解析Full Mesh、Clos/胖树、Dragonfly+、3D Torus与SlimFly拓扑，及NVSwitch与OCS交换控制机制。"
+keywords: "网络拓扑,CLOS,Fat-Tree,Dragonfly,3D Torus,SlimFly,二分带宽,OCS,NVSwitch"
+---
+
 # 拓扑与组网
 
 本章介绍 Scale-Up 域的互联拓扑设计，包括关键指标定义、常见拓扑分析与性能对比。

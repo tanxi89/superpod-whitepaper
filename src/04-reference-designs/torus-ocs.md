@@ -1,3 +1,8 @@
+---
+description: "3D Torus+OCS探索构型：OCS动态成环机制，以谷歌TPU Cube与Palomar为实践案例，讨论切片绕障、Twisted Torus演进及与其他构型的帕累托对比。"
+keywords: "3D Torus,OCS,TPU Cube,Palomar,ICI,Twisted Torus,RoCEv2,拓扑切片,维度顺序路由"
+---
+
 # 探索构型（3D Torus + OCS 型）
 
 为支撑大模型训练、推理与智算中心规模化需求，本章节提出 `以太全互联 + 3D Torus 拓扑 + OCS 光电路交换` 的探索构型。它通过计算、互联、拓扑和调度四层协同，突破传统规模算力上限、通信瓶颈与能效约束，尝试把成本、功耗、切片可用性和故障绕行能力同时压到更优的工程位置。

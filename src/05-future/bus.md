@@ -1,3 +1,8 @@
+---
+description: "将新型总线置于Scale-Up域软件可承接性视角，划分D2D、C2C与机柜级Fabric三类边界，列出寻址、原子、隔离与可观测性等最小能力集。"
+keywords: "总线语义,Scale-Up,D2D,C2C,统一寻址,原子操作,Goodput,UALink,CXL,参考设计"
+---
+
 # 新型总线技术演进
 
 ## 概述 {#bus-evolution}

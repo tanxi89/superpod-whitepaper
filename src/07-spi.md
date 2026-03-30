@@ -1,3 +1,8 @@
+---
+description: "说明SuperPod Pareto Index处于早期筹备阶段，阐述基于白皮书多维框架做产品整理与比较的目标、当前spi目录与模板进展，并开放Pull Request参与。"
+keywords: "SPI,SuperPod Pareto Index,帕累托前沿,产品评估,GitHub,Pull Request,schema,证据口径"
+---
+
 # SuperPod Pareto Index（SPI）
 
 !!! info "筹备中"

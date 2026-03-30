@@ -1,3 +1,8 @@
+---
+description: "说明HBD内统一访存语义：NVSwitch Fabric全局地址空间与UVA机制、PCIe/CXL多主机互联，及SuperNIC与DPU的资源编排架构。"
+keywords: "HBD,UVA,NVSwitch Fabric,PCIe,CXL,Multi-host,NTB,SuperNIC,DPU,Compute Fabric"
+---
+
 # 系统架构
 
 前几节从电气接口、互联协议和网络拓扑三个层面，自底向上地构建了超节点的物理互联基础。本节转向一个更关键的问题：**为什么只有当这些物理互联能力被进一步组织成统一内存能力，它们才会从“链路存在”变成“系统能力成立”？** 未来大规模 AI 基础设施的竞争，越来越不是单颗芯片峰值性能的竞争，而是远端资源能否以接近本地资源的方式被组织、调度、隔离和恢复的竞争。

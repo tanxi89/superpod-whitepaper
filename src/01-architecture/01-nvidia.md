@@ -1,3 +1,8 @@
+---
+description: "梳理NVIDIA从DGX-1经NVSwitch到GB200 NVL72/NVL576的机架级NVLink域扩展路径，解析NV-HBI封装互联与黄氏定律驱动的代际增长逻辑。"
+keywords: "NVIDIA,DGX,NVL72,NVL576,NVLink,NVSwitch,GB200,NV-HBI,Rubin,黄氏定律"
+---
+
 # NVIDIA 超节点
 
 在 2022 年 Hopper 架构发布之际，NVIDIA 提出了十年内 GPU 算力增长 1000 倍的"黄氏定律"（Huang's Law）[^huangs_law]。其中，低精度数值格式、Tensor Core 和工艺进步分别贡献了约 16 倍、12 倍和 2.5 倍的算力提升。这揭示出 NVIDIA 是一家系统供应商而非单纯的芯片供应商，其算力增长并非仅依赖芯片本身。【归纳】

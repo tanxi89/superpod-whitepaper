@@ -1,9 +1,11 @@
 ---
+description: "从算力指数增长切入，引入机柜级高带宽域与系统帕累托前沿，串联架构、软件、仿真、参考设计、未来演进与SPI各章在超节点边界定义与能力兑现中的角色。"
 template: home.html
 title: SuperPod 技术白皮书
 hide:
   - toc
   - navigation
+keywords: "超节点,SuperPod,HBD,帕累托前沿,Scale-Up,Scale-Out,Goodput,参考设计,AI算力,大模型"
 ---
 
 # 面向下一代模型的超节点技术白皮书

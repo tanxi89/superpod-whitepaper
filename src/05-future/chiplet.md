@@ -1,3 +1,8 @@
+---
+description: "阐述2.5D/3D多Die堆叠与CoWoS、Foveros等路线，以NV-HBI与Blackwell做工程实证，解析UCIe四层统一互连，并讨论热管理、TSV、测试与国产化差距。"
+keywords: "Chiplet,多Die堆叠,UCIe,CoWoS,TSV,Hybrid Bonding,NV-HBI,Interposer,四层互连"
+---
+
 # 多Die堆叠技术（Chiplet 与 UCIe）
 
 ## 多Die堆叠在超节点中的定位 {#multi-die-stacking}

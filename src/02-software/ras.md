@@ -1,3 +1,8 @@
+---
+description: "定义超节点RAS指标体系（MTTF/ETTR/Goodput），分层展开硬件ECC与RAS引擎、网络链路RAS、模块化热插拔与Checkpoint恢复、软件可观测与eBPF，及故障演练实践。"
+keywords: "RAS,MTTF,Goodput,ECC,RAS Engine,网络RAS,热插拔,Checkpoint,可观测性,eBPF"
+---
+
 # RAS体系
 
 <!-- - 硬件层：链路健康监控、ECC、重传/重路由策略。

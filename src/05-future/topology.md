@@ -1,3 +1,8 @@
+---
+description: "在Radix与摩尔界约束下讨论拓扑规模上限，对比CLOS、Dragonfly+、3D-Torus与SlimFly的演进逻辑，分析OCS混合拓扑及对参考设计的影响。"
+keywords: "拓扑演进,Radix,Moore bound,CLOS,Dragonfly+,3D-Torus,SlimFly,OCS,二分带宽"
+---
+
 # 先进互联拓扑演进
 
 ## 引言

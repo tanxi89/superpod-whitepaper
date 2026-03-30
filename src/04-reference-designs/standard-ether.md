@@ -1,3 +1,8 @@
+---
+description: "以太型Scale-Up构型：对比ETH-X、SUE、CLink、UEC四类方案，讨论HBD纵向扩展组网及SONiC/SAI/RoCE生态协同与落地实践。"
+keywords: "标准构型,Scale-Up Ethernet,RoCE,HBD,ETH-X,SUE,CLink,UEC,SONiC,SAI"
+---
+
 # 标准构型（全对等互联 + 以太型）
 
 超节点 `Scale-Up` 技术旨在实现单机柜或相邻机柜内 `32` 卡以上规模的 `GPU/NPU` 高速、低延迟、全互联组网，使多卡系统在逻辑层面呈现为单一超级计算单元，并支撑内存语义及 `TP/EP` 并行计算模式。传统方案长期依赖 `NVIDIA NVLink`，其性能突出，但私有封闭架构也限制了跨厂商协同与开放生态发展。自 `2025` 年起，基于以太网的技术路线开始加速推进：国内以 `ETH-X`、`CLink` 为代表，国际则有 `SUE`、`ESUN` 等多条方案并行演进。

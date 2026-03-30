@@ -1,3 +1,8 @@
+---
+description: "介绍华为昇腾从Atlas八卡到CloudMatrix 384的演进，解析HCCS互联、UB灵衢分层通信与达芬奇架构的算力组织方式。"
+keywords: "华为,CloudMatrix 384,昇腾910C,HCCS,UB灵衢,达芬奇,鲲鹏,Atlas 800,CANN"
+---
+
 # 华为超节点
 
 ## 产品概述

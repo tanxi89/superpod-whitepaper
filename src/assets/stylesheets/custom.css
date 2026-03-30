@@ -105,9 +105,6 @@ html {
   hyphens: manual;
   /* 避免段首悬挂标点 */
   hanging-punctuation: first last;
-  /* 优化中文标点挤压（实验性，仅Safari支持，其他浏览器会忽略） */
-  /* stylelint-disable-next-line property-no-unknown */
-  text-spacing: trim-start allow-end ideograph-alpha ideograph-numeric;
 }
 
 .md-typeset hr {
@@ -236,9 +233,9 @@ html {
   font-size: 0.88em;
   font-variant-ligatures: none;
   font-weight: 500;
-  /* 改善中英文混排时的代码可读性 */
   margin: 0 0.1em;
-  word-break: break-all;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .md-typeset pre {
@@ -364,6 +361,7 @@ html {
   margin: 1.5em auto;
   font-size: 0.75rem;
   overflow: hidden;
+  font-variant-numeric: tabular-nums;
 }
 
 .md-typeset table:not([class]) th {

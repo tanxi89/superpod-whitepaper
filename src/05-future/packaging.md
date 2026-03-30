@@ -1,3 +1,8 @@
+---
+description: "将LPO、NPO、CPO定位为不同物理半径与维护窗口下的并行路线，说明功耗时延与均衡方式差异，分述CPO工艺路线（FOWLP/COUPE）及对参考设计的影响。"
+keywords: "LPO,NPO,CPO,先进封装,SerDes,DSP,信号完整性,FOWLP,COUPE,参考设计"
+---
+
 # 先进封装技术演进
 
 ## LPO/CPO/NPO封装技术 {#lpo-cpo-npo}

@@ -1,3 +1,8 @@
+---
+description: "将PGAS与OpenSHMEM置于超节点语境：对称堆全局寻址、单边put/get与原子操作、Scale-Up域Load/Store与Scale-Out RDMA的统一封装，及MoE与KV Cache等稀疏数据流适配。"
+keywords: "PGAS,OpenSHMEM,对称堆,put/get,单边通信,AMO,NVSHMEM,Kernel融合,Scale-Up,RDMA"
+---
+
 # 共享内存与单边通信
 
 前三节已经说明，统一访存要解决的不是“能不能访问远端显存”，而是“能否以可接受的一致性代价、地址复杂度和调度开销，把跨设备内存稳定兑现为 `Goodput`”。但当远端资源在语义上变得“可访问”之后，新的问题随之出现：这些语义能力如何更直接地暴露到运行时与编程模型中？

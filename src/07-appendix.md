@@ -1,3 +1,8 @@
+---
+description: "以术语表形式给出全书关键缩写与概念的中英释义，覆盖集合通信、互联与内存语义、并行模式、网络拓扑、RAS及SPI等。"
+keywords: "术语表,AllReduce,Scale-Up,Scale-Out,HBD,UCIe,UALink,CXL,OCS,Goodput,SPI"
+---
+
 # 附录
 
 ## 术语表
