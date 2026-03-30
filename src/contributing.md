@@ -1,4 +1,6 @@
 ---
+robots:
+  - noindex
 description: "为协作者说明MkDocs仓库目录结构，规范Markdown标题、列表、引用、提示块、脚注、代码块及Mermaid与Vega-Lite图表等Material主题写法。"
 keywords: "MkDocs,Material,Markdown,Admonitions,Mermaid,Vega-Lite,脚注,项目结构,代码块"
 ---

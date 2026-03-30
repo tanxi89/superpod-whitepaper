@@ -1,4 +1,6 @@
 ---
+robots:
+  - noindex
 description: "说明学术主导编辑与产业分域贡献的组织机制，列出牵头单位、学术与产业合编单位、参编作者，并给出GitHub贡献方式与引用格式。"
 keywords: "编写委员会,上海人工智能实验室,产学研,证据口径,GitHub,Pull Request,帕累托前沿"
 ---

@@ -32,7 +32,11 @@
   <meta name="twitter:description" content="{{ page_desc }}" />
   <meta name="twitter:image" content="{{ page_image }}" />
 
-  <!-- SEO meta (description already output by Material base.html) -->
+  <!-- SEO meta -->
+  {% if page and page.meta and page.meta.robots %}
+  <meta name="robots" content="{{ page.meta.robots | join(', ') }}" />
+  {% endif %}
+  <meta name="author" content="{{ config.site_author }}" />
   {% if page and page.meta and page.meta.keywords %}
   <meta name="keywords" content="{{ page.meta.keywords }}" />
   {% else %}
@@ -60,14 +64,15 @@
     },
     "inLanguage": "zh-CN",
     "datePublished": "2025-03-01",
+    {% if page and page.meta and page.meta.git_revision_date_localized %}
+    "dateModified": "{{ page.meta.git_revision_date_localized }}",
+    {% else %}
     "dateModified": "2026-03-29",
+    {% endif %}
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "{{ page_url }}"
     }
   }
   </script>
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="{{ page_url }}" />
 {% endblock %}
