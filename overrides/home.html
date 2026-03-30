@@ -500,10 +500,13 @@
     .sp-partner-group-wrapper.lead {
       margin-bottom: 56px;
     }
+    <!-- ================= 修改标记：去掉牵头单位卡片背景色 ================= -->
+    /* 去掉牵头单位卡片的背景色和特殊边框，与其他单位样式保持一致 */
     .sp-partner-group-wrapper.lead .partner-logo-card {
-      border: 1px solid rgba(11,47,107,.18);
-      background: rgba(11,47,107,.03);
+      background: transparent;           /* 修改：背景改为透明，去掉原有的淡蓝色背景 */
+      border: 1px solid var(--md-typeset-table-color);  /* 修改：边框恢复为与其他单位一致 */
     }
+    <!-- ================= 修改标记结束 ================= -->
     .partners-grid {
       display: flex;
       flex-wrap: wrap;
@@ -662,6 +665,25 @@
     <div class="container">
 
       <!-- 牵头单位 -->
+      <style>
+      /* 最强优先级样式，无视原有CSS，强制放大logo */
+      .sp-partner-group-wrapper.lead .partners-grid .partner-logo-card img {
+        width: 350px !important;
+        height: auto !important;
+        max-width: unset !important;
+        min-width: unset !important;
+        transform: scale(1) !important;
+        object-fit: contain !important;
+        display: block !important;
+      }
+      /* 让容器跟着变大 */
+      .sp-partner-group-wrapper.lead .partners-grid .partner-logo-card {
+        width: auto !important;
+        height: auto !important;
+        max-width: unset !important;
+        min-height: unset !important;
+      }
+      </style>
       <div class="sp-partner-group-wrapper lead">
         <div class="sp-partner-group-title">牵头单位</div>
         <div class="partners-grid">
