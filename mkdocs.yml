@@ -222,7 +222,7 @@ extra:
       logo: assets/logos/sh-electronics.png
     - name: 香港科技大学
       type: institution
-      logo: assets/logos/hkust.svg
+      logo: assets/logos/hkust.jpg
     - name: 中国科学技术大学
       type: institution
       logo: assets/logos/ustc.jpg
