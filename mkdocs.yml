@@ -229,7 +229,7 @@ extra:
     # 产业合编单位（按拼音首字母排序，使用简称）
     - name: 壁仞科技
       type: company
-      logo: assets/logos/biren.png
+      logo: assets/logos/biren.ai
     - name: 海光信息
       type: company
       logo: assets/logos/hygon.png
