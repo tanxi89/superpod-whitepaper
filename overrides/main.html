@@ -7,16 +7,18 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   {% if page and page.meta %}
-  {% set page_desc = page.meta.description | default(config.site_description, true) %}
+  {% set raw_page_desc = page.meta.description | default(config.site_description, true) %}
   {% set page_title = page.title ~ " - " ~ config.site_name if page.title else config.site_name %}
   {% set page_url = page.canonical_url | default(config.site_url, true) %}
   {% else %}
-  {% set page_desc = config.site_description %}
+  {% set raw_page_desc = config.site_description %}
   {% set page_title = config.site_name %}
   {% set page_url = config.site_url %}
   {% endif %}
+  {% set page_desc = raw_page_desc | striptags | replace('\n', ' ') | trim | truncate(160, true, '') %}
   {% set page_image = config.site_url ~ "assets/images/og-cover.png" %}
 
+  <meta name="description" content="{{ page_desc }}" />
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ page_title }}" />
