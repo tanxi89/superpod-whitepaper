@@ -238,7 +238,7 @@ extra:
       logo: assets/logos/huawei.png
     - name: 阶跃星辰
       type: company
-      logo: assets/logos/stepfun.png
+      logo: assets/logos/stepfun.jpg
     - name: 阡视科技
       type: company
       logo: assets/logos/qianshi.png
