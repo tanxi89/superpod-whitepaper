@@ -45,18 +45,18 @@
   <meta name="keywords" content="超节点,SuperPod,AI基础设施,大模型,高带宽域,HBD,帕累托前沿,互联,NVLink,算力,Goodput,白皮书" />
   {% endif %}
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD: use |tojson so quotes/backslashes in titles/descriptions cannot break parsing (Google Rich Results / GSC). -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "{{ page_title }}",
-    "description": "{{ page_desc }}",
-    "url": "{{ page_url }}",
-    "image": "{{ page_image }}",
+    "headline": {{ page_title | tojson }},
+    "description": {{ page_desc | tojson }},
+    "url": {{ page_url | tojson }},
+    "image": {{ page_image | tojson }},
     "author": {
       "@type": "Organization",
-      "name": "{{ config.site_author }}",
+      "name": {{ config.site_author | tojson }},
       "url": "https://github.com/DeepLink-org"
     },
     "publisher": {
@@ -66,14 +66,14 @@
     },
     "inLanguage": "zh-CN",
     "datePublished": "2025-03-01",
-    {% if page and page.meta and page.meta.git_revision_date_localized %}
-    "dateModified": "{{ page.meta.git_revision_date_localized }}",
+    {% if page and page.meta and page.meta.git_revision_date_localized_raw_iso_date %}
+    "dateModified": {{ page.meta.git_revision_date_localized_raw_iso_date | tojson }},
     {% else %}
     "dateModified": "2026-03-29",
     {% endif %}
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "{{ page_url }}"
+      "@id": {{ page_url | tojson }}
     }
   }
   </script>
